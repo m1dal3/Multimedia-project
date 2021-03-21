@@ -1,0 +1,47 @@
+/** Navbar **/
+.navbar.toolbar ul {
+  list-style: none; }
+  .navbar.toolbar ul li {
+    display: inline-block; }
+.navbar.toolbar2 {
+  float: right;
+  display: none; }
+  .navbar.toolbar2 ul {
+    list-style: none; }
+    .navbar.toolbar2 ul li {
+      display: block; }
+.navbar.toolbar3 {
+  float: right; }
+
+/** Navbar **/
+canvas {
+  border: 1px solid; }
+
+/** Other elements **/
+#selection {
+  display: none;
+  position: absolute;
+  border: 1px solid;
+  background: rgba(255, 255, 255, 0.6); }
+
+#textEditor {
+  position: absolute; }
+  #textEditor .row.toolbar ul {
+    margin: 0;
+    list-style: none;
+    padding: 0; }
+
+/** Other elements **/
+/** Icons **/
+.ico {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-size: 12px 12px; }
+  .ico.ico-select {
+    background-image: url("selection.svg"); }
+  .ico.ico-censor {
+    background-image: url("blur.svg"); }
+
+/** Icons **/
+

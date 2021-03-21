@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" media="screen">
+</head>
+
+<body>
+    <div class="navbar toolbar">
+        <ul>
+            <li><input type="button" id="btnNew" value="New"></li>
+            <li><input id="btnImageLoad" type="file" name="image" value="Load image" accept="image/*" /></li>
+            <li><input type="button" value="Download" id="btnImageDownload"></li>
+        </ul>
+    </div>
+    <div class="navbar toolbar">
+        <ul>
+            <li><button id="btnArrow" title="Arrow Tool"><i class="fas fa-location-arrow"></i></button></li>
+            <li><button id="btnPencil" title="Free Draw Tool"><i class="fas fa-pencil-alt"></i></button></li>
+            <li><button id="btnCrop" title="Crop Tool"><i class="fas fa-crop-alt"></i></button></li>
+            <li><button id="btnSelect" title="Select Tool"><i class="ico ico-select"></i></button></li>
+            <li><button id="btnText" title="Text Tool"><i class="fas fa-font"></i></button></li>
+            <li><button id="btnResize" title="Resize Image"><i class="fas fa-expand-alt"></i></button></li>
+        </ul>
+    </div>
+    <div class="navbar toolbar3"><canvas id="histogram" width="150" height="200"></canvas></div>
+    <div class="navbar toolbar2" id="toolbar2">
+        <ul>
+            <li><button class="colorize" data-color="erase" title="Erase" style=""><i class="fas fa-eraser"></i></button></li>
+            <li><button class="colorize" data-color="alpha" title="Reduce alpha" style="background:white;">&nbsp;</button></li>
+            <li><button class="colorize" data-color="red" title="Turn image in red" style="background:red;">&nbsp;</button></li>
+            <li><button class="colorize" data-color="green" title="Turn image in green" style="background:green;">&nbsp;</button></li>
+            <li><button class="colorize" data-color="blue" title="Turn image in blue" style="background:blue;">&nbsp;</button></li>
+            <li><button class="colorize" data-color="censor" title="Censor"><i class="ico ico-censor"></i></button></li>
+            <li><button class="colorize" data-color="blackwhite" title="Black and white tool (decolorize)"><i class="fas fa-tint-slash"></i></button></li>
+        </ul>
+    </div>
+
+    <div id="selection" width="0" height="0"></div>
+    <div id="textEditor"><div class="row"><input type="text" id="textEditorInput"></div><div class="row toolbar"><ul>
+    <li><input id="textEditorSize" value="16">px</li>
+    <li><button class="textColor" data-color="#000" style="background:black" title="Black">&nbsp</button> <button class="textColor" data-color="#fff" style="background:white; border:1px solid;" title="White">&nbsp</button> <button class="textColor" data-color="#ff0000" style="background:#ff0000" title="Red">&nbsp</button> <button class="textColor" data-color="#00ff00" style="background:#00ff00" title="Green">&nbsp</button>  <button class="textColor" data-color="#0000ff" style="background:#0000ff" title="Blue">&nbsp</button> <button class="textColor" data-color="#fcff3e" style="background:#fcff3e" title="Yellow">&nbsp</button> <button class="textColor" data-color="#ff13ec" style="background:#ff13ec" title="Purple">&nbsp</button> <button class="textColor" data-color="#acacac" style="background:#acacac" title="Gray">&nbsp</button> </li>
+    </ul></div></div>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <div id="info"></div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
